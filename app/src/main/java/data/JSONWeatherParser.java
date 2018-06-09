@@ -16,7 +16,6 @@ public class JSONWeatherParser {
     {
         Weather weather = new Weather();
 
-        //stworzenie obiektu json z danych
 
         try {
             JSONObject jsonObject = new JSONObject(data);
@@ -40,6 +39,14 @@ public class JSONWeatherParser {
             weather.currentCondition.setDescription(Utils.getString("description", jsonWeather));
             weather.currentCondition.setCondition(Utils.getString("main", jsonWeather));
             weather.currentCondition.setIcon(Utils.getString("icon", jsonWeather));
+
+            JSONObject mainObj = Utils.getObject("main", jsonObject);
+            weather.currentCondition.setHumidity(Utils.getInt("humidity", mainObj));
+            weather.currentCondition.setPressure(Utils.getInt("pressure", mainObj));
+            weather.currentCondition.setMinTemp(Utils.getFloat("temp_min", mainObj));
+            weather.currentCondition.setMaxTemp(Utils.getFloat("temp_max", mainObj));
+            weather.currentCondition.setTemperature(Utils.getDouble("temp", mainObj));
+
 
 
             JSONObject windObj = Utils.getObject("wind", jsonObject);

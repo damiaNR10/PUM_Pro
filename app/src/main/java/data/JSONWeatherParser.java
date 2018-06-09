@@ -30,7 +30,7 @@ public class JSONWeatherParser {
             place.setLastupdate(Utils.getInt("dt", jsonObject));
             place.setSunrise(Utils.getInt("sunrise", sysObj));
             place.setSunset(Utils.getInt("sunset", sysObj));
-            place.setCity(Utils.getString("city", jsonObject));//city <-> name
+            place.setCity(Utils.getString("name", jsonObject));//city <-> name
             weather.place = place;
 
             JSONArray jsonArray = jsonObject.getJSONArray("weather");
@@ -51,7 +51,7 @@ public class JSONWeatherParser {
 
             JSONObject windObj = Utils.getObject("wind", jsonObject);
             weather.wind.setSpeed(Utils.getFloat("speed", windObj));
-            weather.wind.setDeg(Utils.getFloat("def", windObj));
+            weather.wind.setDeg(Utils.getFloat("deg", windObj));
 
             JSONObject cloudsObj = Utils.getObject("clouds", jsonObject);
             weather.clouds.setPrecipitation(Utils.getInt("all", cloudsObj));

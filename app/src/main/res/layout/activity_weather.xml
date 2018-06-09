@@ -108,4 +108,13 @@ tools:context=".WeatherActivity">
     android:layout_below="@id/setText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/changeCityB"
+        android:layout_below="@+id/updateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55px"
+        android:text="@string/change_city"/>
 </RelativeLayout>

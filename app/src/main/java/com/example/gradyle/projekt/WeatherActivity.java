@@ -12,6 +12,8 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,6 +48,7 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView sunrise;
     private TextView sunset;
     private TextView updated;
+    private Button changeCityB;
 
     Weather weather = new Weather();
 
@@ -66,6 +69,7 @@ public class WeatherActivity extends AppCompatActivity {
         sunrise = (TextView) findViewById(R.id.riseText);
         sunset = (TextView) findViewById(R.id.setText);
         updated = (TextView) findViewById(R.id.updateText);
+        changeCityB = (Button) findViewById(R.id.changeCityB);
 
         CityPreference cityPreference = new CityPreference(WeatherActivity.this);
 
@@ -74,6 +78,21 @@ public class WeatherActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    public class MyActivity extends WeatherActivity {
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            setContentView(R.layout.activity_weather);
+
+            final Button button = findViewById(R.id.changeCityB);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    showInputDialog();
+                }
+            });
+        }
     }
 
     public void renderWeatherData(String city)

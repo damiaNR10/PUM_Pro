@@ -86,12 +86,18 @@ public class WeatherActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_weather);
 
-
             changeCityB.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                }
+            });
+
+
+            /*changeCityB.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     showInputDialog();
                 }
-            });
+            });*/
         }
     }
 
@@ -118,7 +124,7 @@ public class WeatherActivity extends AppCompatActivity {
         {
             final DefaultHttpClient client = new DefaultHttpClient();
 
-            final HttpGet getRequest = new HttpGet("http://www.9ori.com/store/media/images/8ab579a656.jpg");
+            final HttpGet getRequest = new HttpGet(Utils.ICON_URL + code + ".png");
 
             try {
                 HttpResponse response = client.execute(getRequest);

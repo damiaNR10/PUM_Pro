@@ -115,6 +115,15 @@ tools:context=".WeatherActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55px"
+        android:layout_marginTop="30px"
         android:text="@string/change_city"/>
+
+    <EditText
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/changeCityB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30px"
+        android:hint="Warsaw,PL"
+        android:textColor="#fff"/>
 </RelativeLayout>

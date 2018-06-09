@@ -86,8 +86,8 @@ public class WeatherActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_weather);
 
-            final Button button = findViewById(R.id.changeCityB);
-            button.setOnClickListener(new View.OnClickListener() {
+
+            changeCityB.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     showInputDialog();
                 }

@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="#ff1ba1ee"
+android:background="@drawable/apk_background"
 android:padding="20dp"
 tools:context=".WeatherActivity">
 
@@ -111,13 +111,15 @@ tools:context=".WeatherActivity">
 
 
     <Button
+        android:background="#fff"
+        android:paddingLeft="35px"
+        android:paddingRight="35px"
         android:id="@+id/changeCityB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/updateText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30px"
-        android:onClick="displayData"
         android:text="@string/change_city" />
 
 

@@ -1,7 +1,10 @@
 package com.example.gradyle.projekt;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -17,12 +20,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,7 +53,11 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView sunrise;
     private TextView sunset;
     private TextView updated;
-    private Button changeCityB;
+    private TextView proba;
+    public Button changeCityB;
+
+
+
 
     Weather weather = new Weather();
 
@@ -70,9 +79,17 @@ public class WeatherActivity extends AppCompatActivity {
         sunset = (TextView) findViewById(R.id.setText);
         updated = (TextView) findViewById(R.id.updateText);
         changeCityB = (Button) findViewById(R.id.changeCityB);
+        //changeCityET = (EditText) findViewById(R.id.changeCityET);
+        //proba = (TextView) findViewById(R.id.proba);
+
+        final Button button = findViewById(R.id.changeCityB);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showInputDialog();
+            }
+        });
 
         CityPreference cityPreference = new CityPreference(WeatherActivity.this);
-
 
         renderWeatherData(cityPreference.getCity());
 
@@ -80,26 +97,7 @@ public class WeatherActivity extends AppCompatActivity {
 
     }
 
-    public class MyActivity extends WeatherActivity {
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
 
-            setContentView(R.layout.activity_weather);
-
-            changeCityB.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-
-                }
-            });
-
-
-            /*changeCityB.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    showInputDialog();
-                }
-            });*/
-        }
-    }
 
     public void renderWeatherData(String city)
     {
@@ -112,7 +110,7 @@ public class WeatherActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             iconView.setImageBitmap(bitmap);
-           //super.onPostExecute(bitmap);
+
         }
 
         @Override
@@ -198,7 +196,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-    private void showInputDialog()
+    public void showInputDialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(WeatherActivity.this);
         builder.setTitle("Change City");
@@ -220,25 +218,6 @@ public class WeatherActivity extends AppCompatActivity {
         builder.show();
     }
 
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        int id = item.getItemId();
-        if(id == R.id.change_cityId)
-        {
-            showInputDialog();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
 
 
     @Override

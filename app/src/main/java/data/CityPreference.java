@@ -13,11 +13,11 @@ public class CityPreference {
 
     public String getCity()
     {
-        return prefs.getString("city", "London,GB");
+        return prefs.getString("city", "Lisbon,PT");
     }
 
     public void setCity(String city)
     {
-        prefs.edit().putString("city", city).commit();
+        prefs.edit().putString("city", city).apply();
     }
 }

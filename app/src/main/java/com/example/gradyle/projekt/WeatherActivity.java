@@ -31,6 +31,8 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
@@ -118,7 +120,25 @@ public class WeatherActivity extends AppCompatActivity {
             return downloadImage(params[0]);
         }
 
-        private Bitmap downloadImage(String code)
+
+         private Bitmap downloadImage(String code) {
+            try {
+                URL url = new URL(Utils.ICON_URL + code + ".png");
+                Log.d("Data : ", url.toString());
+                HttpURLConnection connection = (HttpURLConnection) url .openConnection();
+                connection.setDoInput(true);
+                connection.connect();
+                InputStream input = connection.getInputStream();
+                Bitmap currentBitmap = BitmapFactory.decodeStream(input);
+                return currentBitmap; }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                 return null; } }
+
+
+
+       /* private Bitmap downloadImage(String code)
         {
             final DefaultHttpClient client = new DefaultHttpClient();
 
@@ -148,7 +168,7 @@ public class WeatherActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return null;
-        }
+        }*/
     }
 
 
@@ -161,6 +181,7 @@ public class WeatherActivity extends AppCompatActivity {
 
             weather.iconData = weather.currentCondition.getIcon();
             weather = JSONWeatherParser.getWeather(data);
+
 
             Log.v("Data: ", weather.currentCondition.getDescription());
 

@@ -26,6 +26,7 @@ public class TemperatureConverter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperature_converter);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Temperature Converter");
 
         bf_c = (Button) findViewById(R.id.bf_c);
         bc_f = (Button) findViewById(R.id.bc_f);

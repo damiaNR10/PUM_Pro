@@ -9,6 +9,7 @@ public class DamianActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_damian);
+        getSupportActionBar().setTitle("");
         
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

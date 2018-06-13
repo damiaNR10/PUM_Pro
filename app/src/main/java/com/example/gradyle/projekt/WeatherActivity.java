@@ -70,6 +70,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Weather");
         setContentView(R.layout.activity_weather);
 
         cityName = (TextView) findViewById(R.id.cityText);

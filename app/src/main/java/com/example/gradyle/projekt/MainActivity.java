@@ -1,18 +1,10 @@
 package com.example.gradyle.projekt;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.lucasurbas.listitemview.ListItemView;
-import com.lucasurbas.listitemview.util.view.CircularIconView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Weather App");
 
         Button bWeather = findViewById(R.id.bWeather);
         bWeather.setOnClickListener(new View.OnClickListener() {
@@ -31,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button bFavorites = findViewById(R.id.bFavorites);
-        bFavorites.setOnClickListener(new View.OnClickListener() {
+        Button baboutApp = findViewById(R.id.baboutApp);
+        baboutApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                Intent intent = new Intent(MainActivity.this, AboutAppActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,40 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="4"
     android:orientation="vertical"
+    android:background="#3F51B5"
     tools:context="com.example.gradyle.projekt.MainActivity">
 
     <Button
         android:id="@+id/bWeather"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="230dp"
+        android:layout_height="240dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_weight="1"
         android:text="@string/weather" />
 
     <Button
-        android:id="@+id/bFavorites"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/favorites" />
-
-    <Button
         android:id="@+id/bConverter"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/baboutApp"
+        android:layout_toEndOf="@+id/bWeather"
         android:layout_weight="1"
         android:text="@string/temperature_converter" />
 
     <Button
+        android:id="@+id/baboutApp"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_alignTop="@+id/bWeather"
+        android:layout_toEndOf="@+id/bWeather"
+        android:layout_weight="1"
+        android:text="@string/about_app" />
+
+    <Button
         android:id="@+id/bAboutUs"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bWeather"
         android:layout_weight="1"
         android:text="@string/aboutUs" />
 
 
 
-</LinearLayout>
+</RelativeLayout>

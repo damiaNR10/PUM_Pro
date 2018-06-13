@@ -36,5 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button bConverter = findViewById(R.id.bConverter);
+        bConverter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TemperatureConverter.class);
+                startActivity(intent);
+            }
+        });
     }
 }

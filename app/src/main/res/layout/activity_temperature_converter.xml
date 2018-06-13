@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProbaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="RESULT"
+        android:id="@+id/TVres"
+        android:textSize="45dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°C - > °F"
+        android:id="@+id/bc_f"
+        android:layout_below="@+id/TVres"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°F - > °C"
+        android:layout_below="@+id/bc_f"
+        android:id="@+id/bf_c"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°C - > °K"
+        android:layout_below="@+id/bf_c"
+        android:id="@+id/bc_k"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°K - > °C"
+        android:layout_below="@+id/bc_k"
+        android:id="@+id/bk_c"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°K - > °F"
+        android:layout_below="@+id/bk_c"
+        android:id="@+id/bk_f"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°F - > °K"
+        android:layout_below="@+id/bk_f"
+        android:id="@+id/bf_k"
+        android:layout_centerHorizontal="true"
+        android:background="#3F51B5"
+        android:textColor="#fff"
+        android:layout_marginBottom="2dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Temperature"
+        android:layout_below="@+id/bf_k"
+        android:id="@+id/ETtemp"
+        android:inputType="number"/>
+
+
+
+</RelativeLayout>

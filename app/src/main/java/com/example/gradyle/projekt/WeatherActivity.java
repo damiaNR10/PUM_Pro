@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -252,7 +253,30 @@ public class WeatherActivity extends AppCompatActivity {
         builder.show();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.favorite_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itemFavorite:
+                addRemoveFavorite();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+    }
+
+    private void addRemoveFavorite() {
+        Toast.makeText(this,"TODO", Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     public boolean onSupportNavigateUp() {

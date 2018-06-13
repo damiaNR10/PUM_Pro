@@ -20,7 +20,11 @@
         </activity>
         <activity android:name=".WeatherActivity" />
         <activity android:name=".FavoritesActivity" />
-        <activity android:name=".TemperatureConverter"></activity>
+        <activity android:name=".TemperatureConverter" />
+        <activity android:name=".aboutUsActivity" />
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".DamianActivity" />
+        <activity android:name=".SebastianActivity"></activity>
     </application>
 
 </manifest>

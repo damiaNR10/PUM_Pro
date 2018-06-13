@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.lucasurbas.listitemview.ListItemView;
+import com.lucasurbas.listitemview.util.view.CircularIconView;
+
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,5 +48,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button bAboutUs = findViewById(R.id.bAboutUs);
+        bAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, aboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
     }
 }

@@ -4,4 +4,5 @@
     <string name="favorites">favorite places</string>
     <string name="change_city">Change City</string>
     <string name="temperature_converter">temperature converter</string>
+    <string name="aboutUs">About Us</string>
 </resources>

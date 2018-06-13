@@ -36,6 +36,7 @@ import java.net.URL;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 
 import data.CityPreference;
 import data.JSONWeatherParser;
@@ -200,6 +201,18 @@ public class WeatherActivity extends AppCompatActivity {
             String sunsetDate = df.format(new Date(weather.place.getSunset()));
             String updateDate = df.format(new Date(weather.place.getLastupdate()));
 
+
+            long dvsunrise = Long.valueOf(weather.place.getSunrise())*1000;
+            java.util.Date dfsunrise = new java.util.Date(dvsunrise);
+            String sunriseValue = new SimpleDateFormat("HH:mm").format(dfsunrise);
+            long dvsunset = Long.valueOf(weather.place.getSunset())*1000;
+            java.util.Date dfsunset = new java.util.Date(dvsunset);
+            String sunsetValue = new SimpleDateFormat("HH:mm").format(dfsunset);
+            long dvupd = Long.valueOf(weather.place.getLastupdate())*1000;
+            java.util.Date dfupd = new java.util.Date(dvupd);
+            String upd = new SimpleDateFormat("HH:mm").format(dfupd);
+
+
             DecimalFormat decimalFormat = new DecimalFormat("#.#");
             String tempFormat = decimalFormat.format(weather.currentCondition.getTemperature());
 
@@ -208,9 +221,9 @@ public class WeatherActivity extends AppCompatActivity {
             humidity.setText("Humidity: " + weather.currentCondition.getHumidity() + "%");
             pressure.setText("Pressure: "+ weather.currentCondition.getPressure() + "hpa");
             wind.setText("Wind: " + weather.wind.getSpeed() + "mps");
-            sunrise.setText("Sunrise: " + sunriseDate);
-            sunset.setText("Sunset: " + sunsetDate);
-            updated.setText("Last Updated: " + updateDate);
+            sunrise.setText("Sunrise: " + sunriseValue);
+            sunset.setText("Sunset: " + sunsetValue);
+            updated.setText("Last Updated: " + upd);
             description.setText("Condition: " + weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescription() + ")");
 
 

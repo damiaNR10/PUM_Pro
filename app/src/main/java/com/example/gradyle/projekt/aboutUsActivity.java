@@ -17,7 +17,7 @@ public class aboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        getSupportActionBar().setTitle("About As");
+        getSupportActionBar().setTitle("About Us");
 
         ListView listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,items);

@@ -25,7 +25,8 @@
         <activity android:name=".InformationActivity" />
         <activity android:name=".DamianActivity" />
         <activity android:name=".SebastianActivity" />
-        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".BestWeatherSitesActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projekt</string>
+    <string name="app_name">Weather App</string>
     <string name="weather">weather</string>
     <string name="favorites">favorite places</string>
     <string name="change_city">Change City</string>
@@ -7,4 +7,11 @@
     <string name="aboutUs">About Us</string>
     <string name="about_app">About APP</string>
     <string name="Contact">Contact</string>
+
+
+    <string name="weather_com"><a href="https://weather.com/weather/today/l/PLXX0067:1:PL">Weather.com</a></string>
+    <string name="best_weather_site">Best Weather Site</string>
+    <string name="github">GitHub: https://github.com/damiaNR10/PUM_Pro</string>
+
+
 </resources>

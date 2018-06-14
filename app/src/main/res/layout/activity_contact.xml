@@ -10,11 +10,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:text="Contact"
-=======
-        android:text="Kontakt"
->>>>>>> 55a23ec9371d20cc2e78fefd2650c5fac3557c38
         android:textSize="30dp"
         android:textAlignment="center"
         android:layout_marginTop="110dp"/>

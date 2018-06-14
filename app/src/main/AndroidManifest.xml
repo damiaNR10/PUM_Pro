@@ -24,7 +24,8 @@
         <activity android:name=".aboutUsActivity" />
         <activity android:name=".InformationActivity" />
         <activity android:name=".DamianActivity" />
-        <activity android:name=".SebastianActivity"></activity>
+        <activity android:name=".SebastianActivity" />
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

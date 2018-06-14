@@ -23,8 +23,10 @@
         android:layout_height="wrap_content"
         android:paddingTop="70dp"
         android:gravity="center"
-        android:text="Aplikacja pozwalająca sprawdzić pogodę w różnych miejscowościach, posiadająca kalkulator przeliczający wartości z F na Celcjusze, dwa panele informacyjne o aplikacji i o nas jako twórcach w których mamy odniesienia do każdego z członków zespołu."
-        android:textSize="20dp"
+        android:text="Aplikacja pozwalająca sprawdzić pogodę w różnych miejscowościach, posiadająca kalkulator przeliczający wartości z Farenheita na Celcjusze, dwa panele informacyjne o aplikacji wyświetla informacje o naszej aplikacji pogodowej i o nas jako twórcach w których mamy odniesienia do każdego z członków zespołu i
+kontakt wyświetla wszelkie możliwości skontaktowania się z twórcami aplikacji.
+"
+        android:textSize="18dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="65dp" />

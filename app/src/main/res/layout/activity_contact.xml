@@ -21,7 +21,10 @@
         android:layout_width="324dp"
         android:layout_height="262dp"
         android:gravity="center"
-        android:text="email@wp.pl"
+        android:text="Adres: Słonawy 14, 64-600 Oborniki
+Telefon: (+48) 502 237 278
+Email: biuro.pogoda@gmail.com
+"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="85dp"
         tools:ignore="MissingConstraints" />

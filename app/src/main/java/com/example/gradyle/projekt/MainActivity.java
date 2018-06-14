@@ -59,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button bBestWeatherSites = findViewById(R.id.bWeatherSites);
+        bBestWeatherSites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BestWeatherSitesActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

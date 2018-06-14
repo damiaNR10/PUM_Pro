@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/textView"
+        android:layout_marginTop="50sp"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="O aplikacji"
-        android:textSize="40dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="6dp" />
+        android:text="About App"
+
+        android:textSize="40sp" />
 
     <TextView
+        android:layout_marginTop="20sp"
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="70dp"
         android:gravity="center"
-        android:text="Aplikacja pozwalająca sprawdzić pogodę w różnych miejscowościach, posiadająca kalkulator przeliczający wartości z Farenheita na Celcjusze, dwa panele informacyjne o aplikacji wyświetla informacje o naszej aplikacji pogodowej i o nas jako twórcach w których mamy odniesienia do każdego z członków zespołu i
-kontakt wyświetla wszelkie możliwości skontaktowania się z twórcami aplikacji.
-"
-        android:textSize="18dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:text="Aplikacja pozwalająca sprawdzić pogodę w różnych miejscach na świecie, posiadająca kalkulator przeliczający jednostki temperatur, dwa panele informacyjne o aplikacji i o nas jako twórcach w których mamy odniesienia do każdego z członków zespołu."
+        android:textSize="20sp" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

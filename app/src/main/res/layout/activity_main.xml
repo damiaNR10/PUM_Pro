@@ -22,6 +22,7 @@
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:layout_below="@+id/baboutApp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/bWeather"
         android:layout_weight="1"
         android:text="@string/temperature_converter" />
@@ -37,7 +38,7 @@
 
     <Button
         android:id="@+id/bAboutUs"
-        android:layout_width="160dp"
+        android:layout_width="171dp"
         android:layout_height="92dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bWeather"
@@ -46,12 +47,23 @@
 
     <Button
         android:id="@+id/bContact"
-        android:layout_width="160dp"
+        android:layout_width="177dp"
         android:layout_height="92dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/bWeather"
+        android:layout_marginEnd="3dp"
         android:layout_weight="1"
         android:text="@string/Contact" />
+
+    <Button
+        android:id="@+id/bWeatherSites"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bAboutUs"
+        android:layout_marginStart="0dp"
+        android:layout_weight="1"
+        android:text="@string/best_weather_site" />
 
 
 </RelativeLayout>

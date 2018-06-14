@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="320dp"
-        android:layout_height="72dp"
-        android:gravity="center"
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Kontakt"
         android:textSize="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:textAlignment="center"
+        android:layout_marginTop="110dp"/>
+
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="324dp"
-        android:layout_height="262dp"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Adres: Słonawy 14, 64-600 Oborniki
-Telefon: (+48) 502 237 278
-Email: biuro.pogoda@gmail.com
-"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="85dp"
-        tools:ignore="MissingConstraints" />
-</android.support.constraint.ConstraintLayout>
+        android:text="w57008@student.wsiz.rzeszow.pl"
+        android:layout_below="@+id/textView1"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="w57012@student.wsiz.rzeszow.pl"
+        android:layout_below="@+id/textView2"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="w57006@student.wsiz.rzeszow.pl"
+        android:layout_below="@+id/textView3"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/TV1bestSites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:autoLink="all"
+        android:text="@string/github"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+
+
+</RelativeLayout>
